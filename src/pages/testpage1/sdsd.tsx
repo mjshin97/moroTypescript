@@ -11,9 +11,9 @@ function PasswordUpdate() {
   return (
     <form>
       <input name="password" />
-      <button type="submit">비밀번호 변경</button>
+      <button type="submit">333 변경</button>
     </form>
   );
 }
 
-export default PasswordUpdate
+export default PasswordUpdate;
