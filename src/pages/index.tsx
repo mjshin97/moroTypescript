@@ -4,14 +4,12 @@ import ReactDOM from "react-dom/client";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import { useRouter } from "next/router"; //
 
 const inter = Inter({ subsets: ["latin"] });
-
-function Button() {
-  //movePage('http://localhost:3000/testpage1');
-}
-
 function Login() {
+  const router = useRouter(); //
+
   return (
     <form action="">
       <div>
@@ -33,11 +31,35 @@ function Login() {
         />
       </div>
       <div>
-        <button id="btn" type="submit" onClick={Button}>
-          LOGIN
-        </button>
+        <input
+          type="button"
+          onClick={() =>
+            router.push({
+              pathname: "/testpage1",
+              query: {
+                name: "Minjun",
+                age: "26",
+              },
+            })
+          }
+          value="Login"
+        />
       </div>
     </form>
+
+    /*
+        <button id="btn" type="submit">
+          LOGIN
+        </button>
+    */
+
+    /*
+        <input
+          type="button"
+          onClick={() => router.replace("/", "http://localhost:3000/testpage1")}
+          value="Push"
+        />      
+    */
 
     /*
     <fieldset>
