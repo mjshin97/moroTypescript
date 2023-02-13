@@ -7,12 +7,18 @@ import styles from "@/styles/Home.module.css";
 import { useRouter } from "next/router"; //
 
 const inter = Inter({ subsets: ["latin"] });
+const [id, setId] = useState("");
+const [pw, setPw] = useState("");
+
 function Login() {
   const router = useRouter(); //
 
+  const onChangefun = (event) => {
+    setId(event.target.value);
+    console.log(event.target.value);
+  }
+
   return (
-
-
     <form action="">
       <div>
         <label>ID</label>
@@ -21,6 +27,9 @@ function Login() {
           name="id"
           id="id"
           //autocomplete="off" required
+          onChange={(event) => {
+            
+          }}
         />
       </div>
 
