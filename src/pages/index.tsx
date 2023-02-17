@@ -5,14 +5,14 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useRouter } from "next/router"; //
+// import * as fs from "fs";
 
 const inter = Inter({ subsets: ["latin"] });
+
 function Login() {
   const router = useRouter(); //
 
   return (
-
-
     <form action="">
       <div>
         <label>ID</label>
@@ -39,7 +39,7 @@ function Login() {
           type="button"
           onClick={() =>
             router.push({
-              pathname: "/testpage1",
+              pathname: "/testpage1/fafa",
               query: {
                 name: "Minjun",
                 age: "26",
