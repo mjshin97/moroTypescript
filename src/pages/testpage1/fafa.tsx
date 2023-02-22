@@ -4,14 +4,12 @@ import ReactDOM from "react-dom/client";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
-import knex from "knex";
-import Mysql2 from "mysql2";
 import fs from "fs";
 
 console.log("DB_PASS: ");
 
 function PasswordUpdate() {
-  //knex.select('id', 'name', 'age').from('users')
+    require("./knex");
 }
 
 export default PasswordUpdate;
